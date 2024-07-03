@@ -4,15 +4,30 @@
     "version": "1.0",
     "description": "",
     "action": {
-        "default_popup": "index.html"
+        "default_popup": "index.html",
+        "default_icon": "/vite.svg"
     },
     "permissions": [
         "scripting",
         "tabs",
-        "activeTab"
+        "activeTab",
+        "storage",
+        "webNavigation"
     ],
     "host_permissions": [
         "https://*/*",
         "http://*/*"
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "*.js",
+                "*.css",
+                "*.html"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
     ]
 }
